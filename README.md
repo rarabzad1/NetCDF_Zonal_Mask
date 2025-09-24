@@ -134,17 +134,3 @@ MIT License. You are free to use and modify for research or operational purposes
 
 * GitHub: [@rarabzad1](https://github.com/rarabzad1)
 * Email: `rarabzad@uwaterloo.ca`
-
-```
-
----
-
-If you want, I can also create a **more visually appealing README** with:
-
-- Badges for latest R version, package checks
-- GIF or screenshot of the app interface
-- Collapsible sections for Inputs/Outputs  
-- Table of spatio-temporal variables in examples  
-
-Do you want me to make that enhanced version?
-```
