@@ -31,6 +31,15 @@ nc_spatial_mask<-function(ncFile,
                             ncFileOut=NULL,
                             var=NULL)
 {
+  library(ncdf4)
+  library(sf)
+  library(sp)
+  library(raster)
+  library(dplyr)
+  library(geosphere)
+  library(lwgeom)
+  library(rmapshaper)
+  library(zip)
   find_spt_vars <- function(nc)
   {
     if (is.null(nc) || !"var" %in% names(nc)) stop("`nc` must be an already-opened ncdf4 object.")
