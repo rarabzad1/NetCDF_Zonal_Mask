@@ -413,7 +413,7 @@ server <- function(input, output, session) {
     }
   })
   
-  # Run nc_spatial_mask when user clicks generate; always pass ncFileOut = NA
+  # Run nc_spatial_mask when user clicks generate; always pass ncFileOut = NULL
   observeEvent(input$generate, {
     req(input$ncfile)
     req(shp_path_r())   # extracted .shp path
@@ -479,7 +479,7 @@ server <- function(input, output, session) {
         returned_value <<- withCallingHandlers({
           nc_spatial_mask(ncFile = nc_copy_path,
                           maskFile = shp_work_shp,
-                          ncFileOut = NA,    # ALWAYS NA as requested
+                          ncFileOut = NULL,    # ALWAYS NA as requested
                           var = vars_arg)
         }, message = function(m) {
           msg <- paste0("[message] ", m$message)
@@ -578,3 +578,4 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui = ui, server = server)
+
